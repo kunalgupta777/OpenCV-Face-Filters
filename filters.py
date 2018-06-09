@@ -7,8 +7,16 @@ import logging as log
 import datetime as dt
 from time import sleep
 import numpy as np
+import os
+import subprocess
 
 cascPath = "haarcascade_frontalface_default.xml"  # for face detection
+
+if not os.path.exists(cascPath):
+    subprocess.call(['./download_filters.sh'])
+else:
+    print('Filters already exist!')
+
 faceCascade = cv2.CascadeClassifier(cascPath)
 log.basicConfig(filename='webcam.log',level=log.INFO)
 
