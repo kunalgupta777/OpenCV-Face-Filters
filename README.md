@@ -12,3 +12,11 @@ Snapchat-like Face Filters in OpenCV
  
 Make Sure to paste all the filter png's in the same directory as _filters.py_
 
+## How to use?
+```bash
+git clone https://github.com/kunalgupta777/OpenCV-Face-Filters
+```
+Browse to the repo
+``` bash
+python filters.py
+```
